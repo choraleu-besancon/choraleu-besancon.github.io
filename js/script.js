@@ -50,14 +50,19 @@ function toggleFunction() {
 
 // Calcul dynamique de l'âge de l'association
 document.addEventListener("DOMContentLoaded", function () {
-    var ageElement = document.getElementById("age");
-    if (ageElement) {
-        var date = new Date();
-        var current_year = date.getFullYear();
-        var creation_asso = 1960;
-        var age = current_year - creation_asso;
-        ageElement.innerHTML = age;
-    }
+    var date = new Date();
+    var current_year = date.getFullYear();
+    var creation_asso = 1960;
+    var age = current_year - creation_asso;
+    var ageElement = document.getElementsByClassName("age");
+    Array.from(ageElement).forEach(element => {
+        if (element) {
+            element.innerHTML = age;
+            console.log("Âge de l'association : " + age + " ans");
+        }
+
+    });
+
 });
 
 // Redimensionnement dynamique du calendrier Google

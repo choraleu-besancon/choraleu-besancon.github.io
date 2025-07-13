@@ -88,9 +88,10 @@
         </div>
     </div>
 
-    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+    <!-- hide on small screen -->
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-hide-small">
         <div class="w3-quarter w3-section">
-            <span class="w3-xlarge"><span id="age"></span> ans</span><br>
+            <span class="w3-xlarge"><span class="age"></span> ans</span><br>
             De Création
         </div>
         <div class="w3-quarter w3-section">
@@ -107,8 +108,29 @@
         </div>
     </div>
 
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-hide-large hide-medium">
+        <div class="w3-row w3-section">
+            <div class="w3-col s6">
+                <div class="w3-margin-bottom">
+                    <span class="w3-xlarge"><span class="age"></span> ans</span><br>
+                    De Création
+                </div>
+                <span class="w3-xlarge">3</span><br>
+                Choeurs
+            </div>
+            <div class="w3-col s6">
+                <div class="w3-margin-bottom">
+                    <span class="w3-xlarge">2 +</span><br>
+                    Stages/ans
+                </div>
+                <span class="w3-xlarge">4+</span><br>
+                Concerts/ans
+            </div>
+        </div>
+    </div>
+
     <!-- Second Parallax Image with concert Text -->
-    <div class="bgimg-2 w3-display-container">
+    <div class="bgimg-2 w3-display-container w3-hide-small">
         <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide">Nos Concerts</span>
         </div>
@@ -159,15 +181,15 @@
 
 
     <!-- Third Parallax Image with concert Text -->
-    <div class="bgimg-3 w3-display-container">
+    <div class="bgimg-3 w3-display-container w3-hide-small">
         <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide">NOS PARTENAIRES</span>
         </div>
     </div>
 
     <!-- Container (Nos partenaires) -->
-
-    <div class="w3-row w3-center w3-dark-grey w3-padding-64" id="partenaires">
+    <!-- hide on small screen -->
+    <div class="w3-row w3-center w3-dark-grey w3-padding-64 w3-hide-small" id="partenaires">
         <h3 class="w3-center">Merci à nos partenaires pour leur soutiens</h3>
         <div class="w3-quarter w3-section">
             <a href="https://www.bourgognefranchecomte.fr/" target="_blank">
@@ -195,8 +217,38 @@
         </div>
     </div>
 
+    <div class="w3-row w3-center w3-dark-grey w3-padding-64 w3-hide-large w3-hide-medium" id="partenaires">
+        <h3 class="w3-center">Merci à nos partenaires pour leur soutiens</h3>
+        <div class="w3-row w3-section">
+            <div class="w3-col s6">
+                <div class="w3-margin-bottom">
+                    <a href="https://www.bourgognefranchecomte.fr/" target="_blank">
+                        <img src="assets/images/main/partenaires/Logo-BFC.png" alt="Logo Bourgogne Franche-Comté"
+                            class="w3-image w3-round partenaire-logo">
+                    </a>
+                </div>
+                <a href="https://www.umlp.fr/" target="_blank">
+                    <img src="assets/images/main/partenaires/Logo-Universite-UMLP.png" alt="Logo Université UMLP"
+                        class="w3-image w3-round partenaire-logo">
+                </a>
+            </div>
+            <div class="w3-col s6">
+                <div class="w3-margin-bottom">
+                    <a href="https://www.crous-bfc.fr/" target="_blank">
+                        <img src="assets/images/main/partenaires/Logo-CROUS.png" alt="Logo CROUS"
+                            class="w3-image w3-round partenaire-logo">
+                    </a>
+                </div>
+                <a href="https://cvec.etudiant.gouv.fr/" target="_blank">
+                    <img src="assets/images/main/partenaires/Logo-CVEC.png" alt="Logo CVEC"
+                        class="w3-image w3-round partenaire-logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Fourth Parallax Image with Contact Text -->
-    <div class="bgimg-4 w3-display-container">
+    <div class="bgimg-4 w3-display-container w3-hide-small">
         <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
         </div>
