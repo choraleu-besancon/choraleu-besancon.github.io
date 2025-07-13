@@ -8,7 +8,7 @@ class ConcertGalleryManager {
     async fetchAndInitializeGalleries() {
         try {
             // Chemin vers galleries.json (adapte le chemin si besoin)
-            const response = await fetch('assets/galleries.json');
+            const response = await fetch('../assets/galleries.json');
             if (!response.ok) throw new Error('Erreur lors du chargement de galleries.json');
             this.galleries = await response.json();
             this.renderGalleries();
