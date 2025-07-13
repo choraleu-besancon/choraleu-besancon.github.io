@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Chorale Universitaire de Besançon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+
+    <!-- Container (Licences Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="home">
+        <ul class="w3-ul w3-card-4 w3-center w3-hover-shadow">
+            <li class="w3-padding-32">
+                <h2 class="w3-center">Licences</h2>
+                <p>Ce site utilise des ressources sous licence. Voici les détails :</p>
+                <ul>
+                    <li><a href="https://fengyuanchen.github.io/viewerjs/" target="_blank">ViewerJS</a> : <a
+                            href="https://opensource.org/licenses/MIT">MIT</a><i class="fa fa-copyright"></i><a
+                            href="https://chenfengyuan.com/" target="_blank">Chen Fengyuan</a></li>
+                    <li>Icônes : <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+
+                    <li>Font Awesome Free is free, open source, and GPL friendly. You can use it for commercial
+                        projects, open source projects, or really almost whatever you want.</li>
+                    <li>Icons — <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0
+                            License</a><br>
+                        In the Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg
+                        and .js files types.
+                    </li>
+                    <li>Fonts — <a href="https://scripts.sil.org/OFL" target="_blank">SIL OFL 1.1 License</a><br>
+                        In the Font Awesome Free download, the SIL OFL license applies to all icons packaged as web and
+                        desktop font files.
+                    </li>
+                    <li>Code — <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a><br>
+                        In the Font Awesome Free download, the MIT license applies to all non-font and non-icon files.
+                    </li>
+            </li>
+
+        </ul>
+        </li>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/viewerjs/dist/viewer.min.js"></script>
+    <script src="./js/viewer.js"></script>
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.classList.add("w3-card", "w3-animate-top", "w3-white");
+                // Correction essentielle pour les dropdowns
+                navbar.style.overflow = "visible";
+                navbar.style.zIndex = "1000";
+            } else {
+                navbar.classList.remove("w3-card", "w3-animate-top", "w3-white");
+                // Rétablir le comportement par défaut
+                navbar.style.overflow = "";
+                navbar.style.zIndex = "";
+            }
+        }
+
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var logo = document.getElementById("navbar-logo");
+            var logoNormal = "assets/images/main/logo_CUB_BN_sans_fond.png";
+            var logoSticky = "assets/images/main/logo_CUB_couleur_sans_fond.png";
+
+            window.addEventListener("scroll", function () {
+                // Si la page est scrollée de plus de 10px, on change le logo
+                if (window.pageYOffset > 100) {
+                    logo.src = logoSticky;
+                } else {
+                    logo.src = logoNormal;
+                }
+            });
+        });
+    </script>
+
+    <script>
+        var date = new Date();
+        var current_year = date.getFullYear()
+        var creation_asso = 1960
+        var age = current_year - creation_asso
+        document.getElementById("age").innerHTML = age;
+    </script>
+
+</body>
+
+</html>

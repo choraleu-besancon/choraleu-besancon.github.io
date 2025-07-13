@@ -1,0 +1,240 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato", sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    color: #696969;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("../assets/background/home1.png");
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("../assets/background/home2.jpg");
+    min-height: 400px;
+}
+
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("../assets/background/home3.png");
+    min-height: 400px;
+}
+
+/* Fourth image (Footer) */
+.bgimg-4 {
+    background-image: url("../assets/background/home4.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {
+    letter-spacing: 10px;
+}
+
+.w3-hover-opacity {
+    cursor: pointer;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 1600px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}
+
+.logo {
+    width: 30px;
+    height: auto;
+}
+
+
+/* Redimensionnement automatique basé sur le nombre d'éléments */
+#galleries-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-cover:hover {
+    opacity: 0.8;
+}
+
+.gallery-overlay {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.hidden-images {
+    display: none;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+    #galleries-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+#logo-text {
+    white-space: nowrap;
+}
+
+/* Par défaut, texte sur une ligne avec fond noir derrière tout */
+#logo-text span {
+    background-color: inherit;
+    /* hérite du fond noir du parent */
+}
+
+/* Étape 2 : cacher "Besançon" sur petits écrans */
+@media screen and (max-width: 700px) {
+    .word-besancon {
+        display: none !important;
+    }
+}
+
+/* Étape 3 : sur très petits écrans, "Chorale" et "Universitaire" empilés, chacun avec fond noir juste derrière le mot */
+@media screen and (max-width: 450px) {
+    #logo-text {
+        white-space: normal !important;
+        /* autoriser retour à la ligne */
+    }
+
+    .word-chorale,
+    .word-universitaire {
+        display: block;
+        background-color: black;
+        padding: 0.3em 0.6em;
+        margin: 0.2em 0;
+        white-space: nowrap;
+        /* empêcher le mot de se couper */
+    }
+}
+
+#navbar-logo {
+    transition: filter 0.5s, opacity 0.5s;
+}
+
+
+/* Grand écran : blocs collés */
+#logo-text .word-chorale,
+#logo-text .word-universitaire,
+#logo-text .word-besancon {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4px;
+    /* Colle les blocs */
+    box-sizing: border-box;
+}
+
+/* Mobile : blocs de même largeur */
+@media (max-width: 600px) {
+    #logo-text {
+        white-space: normal !important;
+        text-align: center;
+    }
+
+    #logo-text .word-chorale,
+    #logo-text .word-universitaire {
+        display: block !important;
+        width: 16em;
+        /* Choisis une largeur adaptée à ton texte le plus long */
+        margin: 0 auto 8px auto !important;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Cacher Besançon sur mobile */
+    #logo-text .word-besancon {
+        display: none !important;
+    }
+}
+
+/* Astuce : ajuste la largeur (16em) selon la longueur du mot le plus long */
+
+.w3-dropdown-hover {
+    position: relative;
+    z-index: 20002 !important;
+}
+
+
+.partenaire-logo {
+    width: 120px;
+    max-width: 90%;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    padding: 8px;
+}
+
+.reseaux {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+

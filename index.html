@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Chorale Universitaire de Besançon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets and scripts -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
+    <!-- Ajoutez Viewer.js -->
+    <link rel="stylesheet" href="https://unpkg.com/viewerjs/dist/viewer.css">
+    <script src="https://unpkg.com/viewerjs/dist/viewer.min.js"></script>
+    <script src="js/viewer.js"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <div class="bgimg-1 w3-display-container" id="home">
+        <div class="w3-display-middle" id="logo-text">
+            <!-- Chorale -->
+            <span class="w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity word-chorale"
+                style="display: inline-block; padding-right: 0.5em;">
+                Chorale
+            </span>
+
+            <!-- Universitaire -->
+            <span class="w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity word-universitaire"
+                style="display: inline-block; padding: 0.5em; margin-left: -4px;">
+                Universitaire
+            </span>
+
+            <!-- Besançon (visible seulement sur grand écran) -->
+            <span class="w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity word-besancon w3-hide-small"
+                style="display: inline-block; padding-left: 0.5em; margin-left: -4px;">
+                Besançon
+            </span>
+        </div>
+    </div>
+
+
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">Étudiant.e ou non, chanteur.se du dimanche ou régulier.ère,<br>
+            la Chorale universitaire de Besançon accueille tout le monde.</h3>
+        <p class="w3-center"><em>Il suffit d'avoir envie</em></p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <img src="assets/images/main/accroche_site.png" class="w3-round w3-image" alt="les amis de la chorale"
+                    width="500" height="333">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-padding-large">
+                <p class="w3-hide-small">si vous voulez vivre des moments forts avec les autres choristes,
+                    partager des soirées conviviales avec vos nouveaux amis,
+                    exercer et apprendre des pratiques de chant,
+                    ou encore vous investir dans la vie d'une association,
+                    Bienvenue !</p>
+                <a class="w3-button w3-center w3-col w3-black w3-padding-large w3-large w3-margin-top"
+                    href="rejoindre.html">
+                    Rejoindre la chorale
+                </a>
+            </div>
+        </div>
+        <p class="w3-large w3-center w3-padding-16">Nos choeurs & thèmes 2025</p>
+        <p class="w3-wide">UniVoice Band</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">Chant composée par
+                des
+                artistes féminine</div>
+        </div>
+        <p class="w3-wide">Le Grand Choeur</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">Musiques de film
+            </div>
+        </div>
+        <p class="w3-wide">Le Choeur Étudiant</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">Noël autour du monde
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge"><span id="age"></span> ans</span><br>
+            De Création
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">3</span><br>
+            Choeurs
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">2 +</span><br>
+            Stages/ans
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">4+</span><br>
+            Concerts/ans
+        </div>
+    </div>
+
+    <!-- Second Parallax Image with concert Text -->
+    <div class="bgimg-2 w3-display-container">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">Nos Concerts</span>
+        </div>
+    </div>
+
+    <!-- Section concert modifiée -->
+    <div class="w3-content w3-container w3-padding-64" id="concert">
+        <h3 class="w3-center">Nos moments de partage</h3>
+        <p class="w3-center"><em>Voici quelques photos de nos concerts<br> Cliquer sur les images pour en voir
+                plus</em>
+        </p><br>
+
+        <!-- Container pour les galeries -->
+        <div id="galleries-container">
+            <!-- Les galeries seront générées ici -->
+        </div>
+        <div class="w3-center w3-padding-32 w3-section w3-dark-grey">
+            <h4>Suivez-nous sur nos réseaux sociaux pour connaître nos projets
+                et assister à nos prochains concerts</h4>
+            <a href="https://www.facebook.com/ChoraleUniversitaireDeBesancon" target="_blank"><i
+                    class="fa fa-facebook-official fa-3x w3-hover-opacity"></i></a>
+            <a href="https://www.instagram.com/ChoraleUniversitaireBesancon" target="_blank"><i
+                    class="fa fa-instagram fa-3x w3-hover-opacity"></i></a>
+            <a href="https://www.youtube.com/channel/UCNo2t0fChcCJH-v42TpPzqA/" target="_blank"><i
+                    class="fa fa-youtube fa-3x w3-hover-opacity"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal simplifiée (optionnelle si vous utilisez uniquement Viewer.js) -->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image">
+            <i class="fa fa-remove"></i>
+        </span>
+
+        <a href="https://www.youtube.com/channel/UCNo2t0fChcCJH-v42TpPzqA/" target="_blank"
+            class="w3-button w3-large w3-black w3-display-topleft" title="Lien YouTube"
+            onclick="event.stopPropagation()">
+            <i class="fa fa-youtube"></i> Voir les vidéos
+        </a>
+
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image" src="./" alt="diapositive">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+
+
+    <!-- Third Parallax Image with concert Text -->
+    <div class="bgimg-3 w3-display-container">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">NOS PARTENAIRES</span>
+        </div>
+    </div>
+
+    <!-- Container (Nos partenaires) -->
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-64" id="partenaires">
+        <h3 class="w3-center">Merci à nos partenaires pour leur soutiens</h3>
+        <div class="w3-quarter w3-section">
+            <a href="https://www.bourgognefranchecomte.fr/" target="_blank">
+                <img src="assets/images/main/partenaires/Logo-BFC.png" alt="Logo Bourgogne Franche-Comté"
+                    class="w3-image w3-round partenaire-logo">
+            </a>
+        </div>
+        <div class="w3-quarter w3-section">
+            <a href="https://www.crous-bfc.fr/" target="_blank">
+                <img src="assets/images/main/partenaires/Logo-CROUS.png" alt="Logo CROUS"
+                    class="w3-image w3-round partenaire-logo">
+            </a>
+        </div>
+        <div class="w3-quarter w3-section">
+            <a href="https://www.umlp.fr/" target="_blank">
+                <img src="assets/images/main/partenaires/Logo-Universite-UMLP.png" alt="Logo Université UMLP"
+                    class="w3-image w3-round partenaire-logo">
+            </a>
+        </div>
+        <div class="w3-quarter w3-section">
+            <a href="https://cvec.etudiant.gouv.fr/" target="_blank">
+                <img src="assets/images/main/partenaires/Logo-CVEC.png" alt="Logo CVEC"
+                    class="w3-image w3-round partenaire-logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Fourth Parallax Image with Contact Text -->
+    <div class="bgimg-4 w3-display-container">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">Venez nous voir</h3>
+        <p class="w3-center"><em>tous les mardis à la MDE</em></p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1338.6603793981678!2d5.98709467802012!3d47.2481712378555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478d63b1fa8aa4b7%3A0xf43cbe1aac9a2221!2sMaison%20des%20%C3%89tudiants%20%7C%20Universit%C3%A9%20Marie%20et%20Louis%20Pasteur!5e0!3m2!1sfr!2sfr!4v1750171288164!5m2!1sfr!2sfr"
+                    width="600" height="450" class="w3-image w3-round" style="width:100%" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Maison des
+                    étudiants - 36 A avenue de l'observatoire<br>
+                    <i class="fa  fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 25000 Besançon<br>
+                    <span class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></span>
+                    <span><u><a href="mailto:choraleu.besancon@gmail.com" class="w3-hover-opacity" target="_blank"
+                                rel="noopener">choraleu.besancon@gmail.com</a></u></span>
+                </div>
+                <p>Posez-nous vos questions ! <i class="fa fa-arrow-up"></i></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>

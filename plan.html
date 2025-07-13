@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Chorale Universitaire de Besançon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+
+    <!-- Container (Licences Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="home">
+        <h2 class="w3-center">Plan du site</h2>
+        <ul class="w3-ul">
+            <li>
+                <a href="main.html">Accueil</a>
+                <ul>
+                    <li>
+                        <a href="rejoindre.html">Rejoins la CUB</a>
+                        <ul>
+                            <li>
+                                <a href="les_choeurs.html">Les Choeurs</a>
+                            </li>
+                            <li>
+                                <a href="tremplin_ecriture.html">Le Tremplin d'Écriture</a>
+                            </li>
+                            <li>
+                                <a href="l_association.html">L'Association</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="main.html#portfolio">Nos Événements</a>
+                    </li>
+                    <li>
+                        <a href="main.html#partenaires">Nos Partenaires</a>
+                    </li>
+                    <li>
+                        <a href="main.html#contact">Contacts</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Informations</p>
+                <ul>
+                    <li>
+                        <a href="info/plan.html">Plan du site</a>
+                    </li>
+                    <li>
+                        <a href="info/licences.html">Licences</a>
+                    </li>
+                    <li>
+                        <a href="info/legal-notice.html">Mentions légales</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/viewerjs/dist/viewer.min.js"></script>
+    <script src="./js/viewer.js"></script>
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.classList.add("w3-card", "w3-animate-top", "w3-white");
+                // Correction essentielle pour les dropdowns
+                navbar.style.overflow = "visible";
+                navbar.style.zIndex = "1000";
+            } else {
+                navbar.classList.remove("w3-card", "w3-animate-top", "w3-white");
+                // Rétablir le comportement par défaut
+                navbar.style.overflow = "";
+                navbar.style.zIndex = "";
+            }
+        }
+
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var logo = document.getElementById("navbar-logo");
+            var logoNormal = "assets/images/main/logo_CUB_BN_sans_fond.png";
+            var logoSticky = "assets/images/main/logo_CUB_couleur_sans_fond.png";
+
+            window.addEventListener("scroll", function () {
+                // Si la page est scrollée de plus de 10px, on change le logo
+                if (window.pageYOffset > 100) {
+                    logo.src = logoSticky;
+                } else {
+                    logo.src = logoNormal;
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
