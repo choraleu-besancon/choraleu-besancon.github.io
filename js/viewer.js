@@ -8,7 +8,11 @@ class ConcertGalleryManager {
     async fetchAndInitializeGalleries() {
         try {
             // Chemin vers galleries.json (adapte le chemin si besoin)
-            const response = await fetch('assets/galleries.json');
+            // Méthode moderne avec l'objet URL
+            const absoluteUrl = new URL('assets/galleries.json', window.location.href).href;
+            console.log(absoluteUrl); // Affiche l'URL absolue sur le web
+
+            const response = await fetch(absoluteUrl);
             if (!response.ok) throw new Error('Erreur lors du chargement de galleries.json');
             this.galleries = await response.json();
             this.renderGalleries();
