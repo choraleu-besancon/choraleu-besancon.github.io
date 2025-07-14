@@ -52,7 +52,7 @@ function toggleFunction() {
 document.addEventListener("DOMContentLoaded", function () {
     var date = new Date();
     var current_year = date.getFullYear();
-    var creation_asso = 1960;
+    var creation_asso = 1962;
     var age = current_year - creation_asso;
     var ageElement = document.getElementsByClassName("age");
     Array.from(ageElement).forEach(element => {
