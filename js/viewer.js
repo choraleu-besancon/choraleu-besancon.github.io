@@ -80,7 +80,7 @@ class ConcertGalleryManager {
                 },
                 hidden: function () {
                     // Scroll vers la section #portfolio en douceur
-                    const portfolio = document.getElementById('portfolio');
+                    const portfolio = document.getElementById('concert');
                     if (portfolio) {
                         portfolio.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }

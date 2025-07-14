@@ -8,7 +8,10 @@
         <a href="index.html#home" class="w3-bar-item w3-button">
             <img id="navbar-logo" class="w3-image logo" src="assets/images/main/logo_CUB_BN_sans_fond.png" alt="Logo">
         </a>
+        <a href="actuality.html" class="w3-bar-item w3-button w3-hide-small"> Notre
+            Actualité</a>
         <div class="w3-dropdown-hover w3-hide-small">
+
             <button class="w3-button">La chorale universitaire</button>
             <div class="w3-dropdown-content w3-card-4">
                 <a href="index.html#about" class="w3-bar-item w3-button">Rejoins la CUB !</a>
@@ -18,15 +21,19 @@
             </div>
         </div>
         <a href="index.html#concert" class="w3-bar-item w3-button w3-hide-small">Nos
-            Évenements</a>
+            Photos</a>
         <a href="index.html#partenaires" class="w3-bar-item w3-button w3-hide-small">Nos
             Partenaires</a>
-        <a href="index.html#contact" class="w3-bar-item w3-button w3-hide-small">
-            Contacts</a>
-        <a href="les_choeurs.html#calendar" class="w3-bar-item w3-button w3-hide-small">
-            Agenda</a>
-        <a href="actuality.html" class="w3-bar-item w3-button w3-hide-small">
-            Actualités</a>
+
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-button">Info Pratique</button>
+            <div class="w3-dropdown-content w3-card-4">
+                <a href="index.html#contact" class="w3-bar-item w3-button">
+                    Contacts</a>
+                <a href="calendar.html" class="w3-bar-item w3-button">
+                    Agenda</a>
+            </div>
+        </div>
     </div>
 
 
@@ -34,6 +41,7 @@
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="actuality.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Notre Actualité</a>
         <div class="w3-dropdown-hover w3-mobile">
             <button class="w3-button">La chorale universitaire</button>
             <div class="w3-dropdown-content w3-card-4">
@@ -43,7 +51,13 @@
                 <a href="l_association.html" class="w3-bar-item w3-button">L'association</a>
             </div>
         </div>
-        <a href="index.html#concert" class="w3-bar-item w3-button" onclick="toggleFunction()">Nos Concerts</a>
-        <a href="index.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contacts</a>
+        <a href="index.html#concert" class="w3-bar-item w3-button" onclick="toggleFunction()">Nos photos</a>
+        <div class="w3-dropdown-hover w3-mobile">
+            <button class="w3-button">Info Pratique</button>
+            <div class="w3-dropdown-content w3-card-4">
+                <a href="index.html#contact" class="w3-bar-item w3-button">Contacts</a>
+                <a href="calendar.html" class="w3-bar-item w3-button">Agenda</a>
+            </div>
+        </div>
     </div>
 </div>

@@ -235,3 +235,8 @@ html {
     z-index: 1000;
 }
 
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
