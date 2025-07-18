@@ -37,9 +37,9 @@ def generate_galleries_json(root_dir, output_file):
                 galleries.append({
                     'id': num_id,
                     'title': title,
-                    'coverImage': f'../assets/images/galleries/{folder}/{cover}',
-                    'images': [f'../assets/images/galleries/{folder}/{cover}'] +
-                              [f'../assets/images/galleries/{folder}/{img}' for img in images]
+                    'coverImage': f'assets/images/galleries/{folder}/{cover}',
+                    'images': [f'assets/images/galleries/{folder}/{cover}'] +
+                              [f'assets/images/galleries/{folder}/{img}' for img in images]
                 })
 
     with open(output_file, 'r', encoding='utf-8') as f:
