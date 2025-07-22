@@ -9,21 +9,28 @@ function onClick(element) {
 // Change style of navbar on scroll
 function handleNavbarAndLogoOnScroll() {
     var navbar = document.getElementById("myNavbar");
-    var logo = document.getElementById("navbar-logo");
+    if (!document.URL.includes("index.html")) {
+        navbar.classList.remove("w3-text-white");
+        navbar.classList.add("w3-card", "w3-theme", "w3-text-black");
+        navbar.style.overflow = "visible";
+        navbar.style.zIndex = "1000";
+    }
+    else {
 
-    // Détection du scroll
-    var scrolled = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100;
+        // Détection du scroll
+        var scrolled = document.body.scrollTop > 100 || document.documentElement.scrollTop > 100;
 
-    // Navbar
-    if (navbar) {
-        if (scrolled) {
-            navbar.classList.add("w3-card", "w3-animate-top", "w3-white");
-            navbar.style.overflow = "visible";
-            navbar.style.zIndex = "1000";
-        } else {
-            navbar.classList.remove("w3-card", "w3-animate-top", "w3-white");
-            navbar.style.overflow = "";
-            navbar.style.zIndex = "";
+        // Navbar
+        if (navbar) {
+            if (scrolled) {
+                navbar.classList.add("w3-card", "w3-animate-top", "w3-theme", "w3-text-black");
+                navbar.style.overflow = "visible";
+                navbar.style.zIndex = "1000";
+            } else {
+                navbar.classList.remove("w3-card", "w3-animate-top", "w3-theme", "w3-text-black");
+                navbar.style.overflow = "";
+                navbar.style.zIndex = "";
+            }
         }
     }
 }
