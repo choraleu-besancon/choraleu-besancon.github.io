@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
     <script src="js/script.js"></script>
 </head>
 
@@ -94,12 +95,12 @@
         function myFunction() {
             var navbar = document.getElementById("myNavbar");
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.classList.add("w3-card", "w3-animate-top", "w3-white");
+                navbar.classList.add("w3-card", "w3-animate-top", "w3-theme-l5");
                 // Correction essentielle pour les dropdowns
                 navbar.style.overflow = "visible";
                 navbar.style.zIndex = "1000";
             } else {
-                navbar.classList.remove("w3-card", "w3-animate-top", "w3-white");
+                navbar.classList.remove("w3-card", "w3-animate-top", "w3-theme-l5");
                 // Rétablir le comportement par défaut
                 navbar.style.overflow = "";
                 navbar.style.zIndex = "";
