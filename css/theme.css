@@ -102,7 +102,7 @@ html {
 
 .w3-hover-theme:hover {
     color: #000 !important;
-    background-color: #92b6d5 !important
+    background-color: #4d81b1 !important
 }
 
 .w3-hover-text-theme:hover {
@@ -113,6 +113,49 @@ html {
     border-color: #92b6d5 !important
 }
 
+/* c'est pour le menu de navigation, la partie chorale avec le sous-menu */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown:hover .dropbtn {
+    color: #000 !important;
+    background-color: #4d81b1 !important
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 /* bleu foncé = w3-theme-d3
  * bleu claire = w3-theme
+ * bleu quand on passe sur un bouton : w3-hover-theme:hover
  */
