@@ -6,7 +6,7 @@ function onClick(element) {
     captionText.innerHTML = element.alt;
 }
 
-// Change style of navbar and logo on scroll
+// Change style of navbar on scroll
 function handleNavbarAndLogoOnScroll() {
     var navbar = document.getElementById("myNavbar");
     var logo = document.getElementById("navbar-logo");
@@ -25,16 +25,6 @@ function handleNavbarAndLogoOnScroll() {
             navbar.style.overflow = "";
             navbar.style.zIndex = "";
         }
-    }
-
-    // Logo
-    if (logo) {
-        // Détection du dossier courant pour le chemin du logo
-        var path = window.location.pathname;
-        var prefix = (path.match(/^\/page\//) || path.match(/^\/info\//)) ? "../" : "";
-        var logoNormal = prefix + "assets/images/main/logo_CUB_BN_sans_fond.png";
-        var logoSticky = prefix + "assets/images/main/logo_CUB_couleur_sans_fond.png";
-        logo.src = scrolled ? logoSticky : logoNormal;
     }
 }
 
