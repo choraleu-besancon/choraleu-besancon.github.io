@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="assets/images/main/Favicon.ico" type="image/x-icon">
+
     <!-- stylesheets and script -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme.css">
     <script src="js/script.js"></script>
 </head>
 
@@ -33,7 +34,7 @@
                 <a href="https://chenfengyuan.com/" target="_blank">Chen Fengyuan</a>
             </li>
             <li>
-                <h2>Icônes provenant de <a class="w3-text-blue w3-hover-opacity"
+                <h2>Icônes provenant de <a class="w3-text-theme w3-hover-opacity"
                         href="https://fontawesome.com/v4/icons/" target="_blank">Font Awesome</a></h2>
 
                 <h3>Font License</h3>
@@ -75,74 +76,6 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-
-
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/viewerjs/dist/viewer.min.js"></script>
-    <script src="./js/viewer.js"></script>
-    <script>
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
-
-        // Change style of navbar on scroll
-        window.onscroll = function () { myFunction() };
-        function myFunction() {
-            var navbar = document.getElementById("myNavbar");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                navbar.classList.add("w3-card", "w3-animate-top", "w3-theme-l5");
-                // Correction essentielle pour les dropdowns
-                navbar.style.overflow = "visible";
-                navbar.style.zIndex = "1000";
-            } else {
-                navbar.classList.remove("w3-card", "w3-animate-top", "w3-theme-l5");
-                // Rétablir le comportement par défaut
-                navbar.style.overflow = "";
-                navbar.style.zIndex = "";
-            }
-        }
-
-
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function toggleFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var logo = document.getElementById("navbar-logo");
-            var logoNormal = "assets/images/main/logo_CUB_BN_sans_fond.png";
-            var logoSticky = "assets/images/main/logo_CUB_couleur_sans_fond.png";
-
-            window.addEventListener("scroll", function () {
-                // Si la page est scrollée de plus de 10px, on change le logo
-                if (window.pageYOffset > 100) {
-                    logo.src = logoSticky;
-                } else {
-                    logo.src = logoNormal;
-                }
-            });
-        });
-    </script>
-
-    <script>
-        var date = new Date();
-        var current_year = date.getFullYear()
-        var creation_asso = 1960
-        var age = current_year - creation_asso
-        document.getElementById("age").innerHTML = age;
-    </script>
 
 </body>
 
