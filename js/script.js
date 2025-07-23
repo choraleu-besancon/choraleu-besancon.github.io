@@ -9,7 +9,7 @@ function onClick(element) {
 // Change style of navbar on scroll
 function handleNavbarAndLogoOnScroll() {
     var navbar = document.getElementById("myNavbar");
-    if (!document.URL.includes("index.html")) {
+    if ((document.getElementById("homepage") == null)) {
         navbar.classList.remove("w3-text-white");
         navbar.classList.add("w3-card", "w3-theme", "w3-text-black");
         navbar.style.overflow = "visible";
