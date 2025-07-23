@@ -10,7 +10,7 @@ function onClick(element) {
 function handleNavbarAndLogoOnScroll() {
     var navbar = document.getElementById("myNavbar");
     if ((document.getElementById("homepage") == null)) {
-        navbar.classList.remove("w3-text-white");
+        navbar.classList.remove("w3-text-theme");
         navbar.classList.add("w3-card", "w3-theme", "w3-text-black");
         navbar.style.overflow = "visible";
         navbar.style.zIndex = "1000";
@@ -23,11 +23,13 @@ function handleNavbarAndLogoOnScroll() {
         // Navbar
         if (navbar) {
             if (scrolled) {
+                navbar.classList.remove("w3-text-theme");
                 navbar.classList.add("w3-card", "w3-animate-top", "w3-theme", "w3-text-black");
                 navbar.style.overflow = "visible";
                 navbar.style.zIndex = "1000";
             } else {
                 navbar.classList.remove("w3-card", "w3-animate-top", "w3-theme", "w3-text-black");
+                navbar.classList.add("w3-text-theme");
                 navbar.style.overflow = "";
                 navbar.style.zIndex = "";
             }
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var ageElement = document.getElementsByClassName("age");
     Array.from(ageElement).forEach(element => {
         if (element) {
-            element.innerHTML = age;
+            element.innerHTML = '<b>' + age + '</b>';
             console.log("Âge de l'association : " + age + " ans");
         }
 

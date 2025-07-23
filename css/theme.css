@@ -18,7 +18,6 @@ html {
     line-height: 1.8;
 }
 
-
 /* theme du site */
 
 
@@ -27,52 +26,52 @@ html {
     background-color: #f8fbfc !important
 }
 
-.w3-theme-l4 {
+/* .w3-theme-l4 {
     color: #000 !important;
     background-color: #e9f0f6 !important
-}
+} */
 
-.w3-theme {
+/* .w3-theme-l3 {
     color: #000 !important;
     background-color: #d3e1ee !important
-}
+} */
 
-.w3-theme {
+/* .w3-theme-l2 {
     color: #000 !important;
     background-color: #bdd2e5 !important
-}
+} */
 
-.w3-theme-l1 {
+/* .w3-theme-l1 {
     color: #000 !important;
     background-color: #a7c4dd !important
-}
+} */
 
-.w3-theme-d1 {
+/* .w3-theme-d1 {
     color: #fff !important;
     background-color: #77a3ca !important
-}
+} */
 
-.w3-theme-d2 {
+/* .w3-theme-d2 {
     color: #fff !important;
     background-color: #5d92c0 !important
-}
+} */
 
 .w3-theme-d3 {
     color: #fff !important;
     background-color: #4681b4 !important
 }
 
-.w3-theme-d4 {
+/* .w3-theme-d4 {
     color: #fff !important;
     background-color: #3c6e9a !important
-}
+} */
 
-.w3-theme-d5 {
+/* .w3-theme-d5 {
     color: #fff !important;
     background-color: #325c81 !important
-}
+} */
 
-.w3-theme-light {
+/* .w3-theme-light {
     color: #000 !important;
     background-color: #f8fbfc !important
 }
@@ -85,7 +84,7 @@ html {
 .w3-theme-action {
     color: #fff !important;
     background-color: #325c81 !important
-}
+} */
 
 .w3-theme {
     color: #000 !important;
@@ -96,66 +95,34 @@ html {
     color: #92b6d5 !important
 }
 
-.w3-border-theme {
+/* .w3-border-theme {
     border-color: #92b6d5 !important
-}
+} */
 
 .w3-hover-theme:hover {
     color: #000 !important;
     background-color: #4d81b1 !important
 }
 
-.w3-hover-text-theme:hover {
+/* .w3-hover-text-theme:hover {
     color: #92b6d5 !important
-}
+} */
 
-.w3-hover-border-theme:hover {
+/* .w3-hover-border-theme:hover {
     border-color: #92b6d5 !important
-}
-
-/* c'est pour le menu de navigation, la partie chorale avec le sous-menu */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-    border: none;
-    outline: none;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+} */
 
 .dropdown:hover .dropbtn {
     color: #000 !important;
     background-color: #4d81b1 !important
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
 
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-/* bleu foncé = w3-theme-d3
- * bleu claire = w3-theme
- * bleu quand on passe sur un bouton : w3-hover-theme:hover
+/* explication code couleur :
+ * theme-l5 : pour la fleche de bas de page et pour la barre de navigation sur petit écrans
+ * theme-d3 : tout les boutons et éléments en bleu foncé
+ * theme : tout les boutons et éléments en bleu claire (le thème principale)
+ * text-theme : les textes et liens en bleu
+ * hover-theme : la couleur de survole d'éléments ou de boutons
+ * dropdown-hover : couleur du survole de la barre de navigation (le sous-menu précisement)
  */
