@@ -14,7 +14,7 @@
         <div class="dropdown w3-hide-small">
             <button class="dropbtn w3-button w3-hover-theme">La chorale universitaire</button>
             <div class="dropdown-content w3-card w3-theme">
-                <a href="index.html#about" class="w3-bar-item w3-button w3-hover-theme">Rejoins la CUB !</a>
+                <a href="rejoindre.html" class="w3-bar-item w3-button w3-hover-theme">Rejoins la CUB !</a>
                 <a href="les_choeurs.html" class="w3-bar-item w3-button w3-hover-theme">3 chœurs</a>
                 <a href="tremplin_ecriture.html" class="w3-bar-item w3-button w3-hover-theme">Le tremplin d'écriture</a>
                 <a href="l_association.html" class="w3-bar-item w3-button w3-hover-theme">L'association</a>
@@ -34,9 +34,18 @@
 <div id="navDemo" class="w3-bar-block w3-theme-l5 w3-hide w3-hide-large w3-hide-medium">
         <a href="actuality.html" class="w3-bar-item w3-button w3-hover-theme" onclick="toggleFunction()">Notre Actualité</a>
         <div class="dropdown w3-mobile">
-            <button class="dropbtn w3-button w3-hover-theme">La chorale universitaire</button>
+            <button class="dropbtn w3-button w3-hover-theme" onclick="this.classList.toggle('open')">
+                La chorale universitaire
+                <i class="fa fa-angle-right w3-margin-left" style="transition: transform 0.3s;" 
+                   [class.open]="this.classList.contains('open')"></i>
+            </button>
+            <style>
+                .dropbtn.open .fa-angle-right {
+                    transform: rotate(90deg);
+                }
+            </style>
             <div class="dropdown-content w3-card-4">
-                <a href="index.html#about" class="w3-bar-item w3-button w3-hover-theme">Rejoins la CUB !</a>
+                <a href="rejoindre.html" class="w3-bar-item w3-button w3-hover-theme">Rejoins la CUB !</a>
                 <a href="les_choeurs.html" class="w3-bar-item w3-button w3-hover-theme">3 chœurs</a>
                 <a href="tremplin_ecriture.html" class="w3-bar-item w3-button w3-hover-theme">Le tremplin d'écriture</a>
                 <a href="l_association.html" class="w3-bar-item w3-button w3-hover-theme">L'association</a>
