@@ -1,0 +1,5 @@
+User-agent: Googlebot
+Disallow: /js/
+Disallow: /md/
+Disallow: /tools/
+Sitemap: https://choraleu-besancon.fr/sitemap.xml
