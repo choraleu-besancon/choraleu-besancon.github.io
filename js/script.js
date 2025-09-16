@@ -101,7 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
     includeHTML("navbar", "navbar.html", function () {
         handleNavbarAndLogoOnScroll(); // Met à jour le logo dès le chargement
     });
-    includeHTML("footer", "footer.html");
+    includeHTML("footer", "footer.html", function() {
+        var copyright = document.getElementById("copyright");
+        copyright.innerHTML = new Date().getFullYear();
+    });
 
     // Ajoute le scroll listener après le chargement du DOM
     window.addEventListener("scroll", handleNavbarAndLogoOnScroll);
