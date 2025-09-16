@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     includeHTML("footer", "footer.html", function() {
         var copyright = document.getElementById("copyright");
-        copyright.innerHTML = new Date().getFullYear();
+        copyright.innerHTML =" " + new Date().getFullYear();
     });
 
     // Ajoute le scroll listener après le chargement du DOM
