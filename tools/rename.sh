@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Dossier cible (par défaut le dossier courant)
-DIR="assets/images/galleries/60_temps"
+# Dossier cible (changer le chemin si besoin)
+DIR="../assets/images/galleries/4_Fimu 2024"
 # Extensions d’images à traiter (modifiez si besoin)
-EXTENSIONS="jpg jpeg png gif bmp webp tiff"
+EXTENSIONS="jpg JPG jpeg png gif bmp webp tiff"
 
 cd "$DIR" || exit 1
 
