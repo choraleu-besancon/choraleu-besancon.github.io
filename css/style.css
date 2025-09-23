@@ -15,6 +15,11 @@
     min-height: 100%;
 }
 
+.bgimg-1-mobile {
+    background-image: url("../assets/background/home1-mobile.JPG");
+    min-height: 80%;
+}
+
 /* Second image (Portfolio) */
 .bgimg-2 {
     background-image: url("../assets/background/home2.jpg");
