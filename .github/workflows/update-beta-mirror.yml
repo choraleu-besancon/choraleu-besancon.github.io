@@ -1,0 +1,25 @@
+name: Update Beta Mirror
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  sync-to-beta-mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout beta branch
+        uses: actions/checkout@v3
+        with:
+          ref: beta
+
+      - name: Push beta branch to beta-mirror repository as main
+        env:
+          REPO_MIRROR_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/choraleu-besancon/choraleu-besancon-beta.git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote add beta-mirror $REPO_MIRROR_URL
+          git push -f beta-mirror beta:main
