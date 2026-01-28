@@ -1,0 +1,20 @@
+name: Sync to Beta Repo
+on:
+  push:
+    branches:
+      - beta # Se déclenche quand on pousse sur la branche beta
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Secondary Repo
+        run: |
+          git remote add secondary https://${{ secrets.ACTIONS_KEY }}@github.com/choraleu-besancon/beta-website.git
+          git push secondary beta:main --force 
+          # On pousse la branche beta du principal vers la branche main du secondaire
