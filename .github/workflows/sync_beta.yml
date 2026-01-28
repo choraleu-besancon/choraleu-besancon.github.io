@@ -2,7 +2,7 @@ name: Sync to Beta Repo
 on:
   push:
     branches:
-      - beta # Se déclenche quand on pousse sur la branche beta
+      - beta
 
 jobs:
   build-and-deploy:
@@ -14,7 +14,15 @@ jobs:
           fetch-depth: 0
 
       - name: Push to Secondary Repo
+        env:
+          MY_TOKEN: ${{ secrets.ACTIONS_KEY }}
         run: |
-          git remote add secondary https://${{ secrets.ACTIONS_KEY }}@github.com/choraleu-besancon/beta-website.git
-          git push secondary beta:main --force 
-          # On pousse la branche beta du principal vers la branche main du secondaire
+          # On configure l'identité du bot pour éviter les erreurs Git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # On utilise x-access-token pour une authentification propre via HTTPS
+          git remote add secondary https://x-access-token:${MY_TOKEN}@github.com/choraleu-besancon/beta-website.git
+          
+          # On pousse la branche beta locale vers la branche main du dépôt distant
+          git push secondary beta:main --force
