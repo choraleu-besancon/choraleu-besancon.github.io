@@ -14,7 +14,7 @@ body,
 html {
     height: 100%;
     color: #000000;
-    background-color: #f8fbfc;
+    background-color: #f3e9e1;
     line-height: 1.8;
 }
 
@@ -88,7 +88,7 @@ html {
 
 .w3-theme {
     color: #000 !important;
-    background-color: #f1ea7f !important
+    background-color: #fcd55a !important
 }
 
 .w3-text-theme {
@@ -109,7 +109,7 @@ html {
 }
 
 .w3-hover-text-theme:hover {
-    color: #f1ea7f !important
+    color: #fcd55a !important
 }
 
 /* .w3-hover-border-theme:hover {
@@ -122,16 +122,16 @@ html {
 }
 
 .card {/* couleur w3-theme / w3-theme-l3 */
-  background: linear-gradient(-45deg, #f1ea7f 0%, #f9f6cc 100%);
+  background: linear-gradient(-45deg, #fcd55a 0%, #f9f6cc 100%);
 }
 
 .card-container_2::before {/* couleur w3-theme / w3-theme-l3 */
-  background: linear-gradient(-45deg, #f1ea7f 0%, #f9f6cc 100%);
+  background: linear-gradient(-45deg, #fcd55a 0%, #f9f6cc 100%);
   
 }
 
 .card_2 .img-content_2 {/* couleur w3-theme / w3-theme-l3 */
-  background: linear-gradient(-45deg, #f1ea7f 0%, #f9f6cc 100%);
+  background: linear-gradient(-45deg, #fcd55a 0%, #f9f6cc 100%);
 }
 
 /* explication du code couleur :
